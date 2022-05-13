@@ -1,6 +1,9 @@
 package com.devsuperior.dsmovie.dto;
 
+import java.util.Set;
+
 import com.devsuperior.dsmovie.entities.Movie;
+import com.devsuperior.dsmovie.entities.Score;
 
 public class MovieDTO {
 	
@@ -9,6 +12,10 @@ public class MovieDTO {
 	private Double score;
 	private Integer count;
 	private String image;
+	
+	
+	
+
 	
 	public MovieDTO() {
 	}
@@ -29,6 +36,7 @@ public class MovieDTO {
 		score = movie.getScore();
 		count = movie.getCount();
 		image = movie.getImage();
+	
 	}
 
 	public Long getId() {
@@ -69,6 +77,10 @@ public class MovieDTO {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public Set<Score> getScores() {
+		return getScores();
 	}
 	
 	
