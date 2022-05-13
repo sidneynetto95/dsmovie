@@ -8,10 +8,6 @@ import javax.persistence.ManyToOne;
 
 @Embeddable
 public class ScorePK implements Serializable {
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
@@ -19,14 +15,11 @@ public class ScorePK implements Serializable {
 	private Movie movie;
 	
 	@ManyToOne
-	@JoinColumn(name = "uder_id")
+	@JoinColumn(name = "user_id")
 	private User user;
 	
-
 	public ScorePK() {
-		
 	}
-
 
 	public Movie getMovie() {
 		return movie;
@@ -36,7 +29,6 @@ public class ScorePK implements Serializable {
 		this.movie = movie;
 	}
 
-	
 	public User getUser() {
 		return user;
 	}
@@ -44,7 +36,4 @@ public class ScorePK implements Serializable {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
-	
-	
 }
